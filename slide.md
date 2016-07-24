@@ -19,9 +19,6 @@ background-image: url(images/asg.png)
 
 ---
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_osaka_office_front_800-e1465205568251.jpg)
-
----
-background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_osaka_office_front_800-e1465205568251.jpg)
 **クラスメソッド<br/>大阪オフィス<br/>爆誕**
 
 ---
@@ -29,24 +26,19 @@ background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/n
 **肥後橋駅から<br/>徒歩1分**
 
 ---
-background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_office_naka-e1465280928774.jpg)
+background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_kaigishitsu-e1465281377447.jpg)
+**日当り良好**
 
 ---
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_office_naka-e1465280928774.jpg)
-**オサレ系<br/>オフィス**
+**おしゃれ系<br/>オフィス**
+
+---
+background-image: url(images/osaka-office.png)
 
 ---
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_office_naka-e1465280928774.jpg)
-
----
-background-image: url(images/osaka-office-osare.jpg)
-
----
-background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_office_naka-e1465280928774.jpg)
-
----
-background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_office_naka-e1465280928774.jpg)
-**オサレ系<br/>オフィス<br/>(2回目)**
+**おしゃれ系<br/>オフィス**
 
 ---
 background-image: url(images/osaka-members.png)
@@ -338,6 +330,16 @@ class: middle
 #### https://speakerdeck.com/fujiwara3/awsfalseotosukerutonakayokufu-kihe-u
 ### - Developers.IO
 #### http://dev.classmethod.jp/
+
+---
+### - スケジュールに基づくスケーリング
+#### https://docs.aws.amazon.com/ja_jp/AutoScaling/latest/DeveloperGuide/schedule_time.html
+### - ASGとスポットインスタンスの連携
+#### http://www.slideshare.net/GedowFather/gedow-style-aws-spot-instance
+### - スポットフリート
+#### http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/spot-fleet.html
+### - オートスケール時にSNSへ通知させる
+#### http://docs.aws.amazon.com/ja_jp/AutoScaling/latest/DeveloperGuide/ASGettingNotifications.html
 
 ---
 layout: true
