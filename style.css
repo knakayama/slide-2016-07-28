@@ -66,6 +66,10 @@ strong {
   color: red;
 }
 
+blockquote {
+  font-size: 3.5em;
+}
+
 #slide-how .slides {
   font-size: 0.9em;
   position: absolute;
@@ -108,10 +112,10 @@ img[alt=PSA] {
   width: 400px;
 }
 
-img[alt=cloudwatch-metrics], img[alt=cloudwatch-alarms], img[alt=cloudwatch-asg] {
+img[alt=cloudwatch-alarms], img[alt=cloudwatch-asg] {
   width: 700px;
 }
 
-img[alt=access-normal], img[alt=access-high] {
+img[alt=access-normal], img[alt=access-high], img[alt=cloudwatch-metrics] {
   width: 900px;
 }

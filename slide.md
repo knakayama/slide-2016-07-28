@@ -2,14 +2,15 @@ layout: true
 class: center, middle
 
 ---
+background-image: url(images/asg.png)
 # オートスケーリンググループはともだち、こわくないよ
-## knakayama
+### 神戸デジタル・ラボ インフラ勉強会<br/>AWS勉強会(初心者向け) #1<br/>2016/07/28 中山 幸治
 
 ---
 # 自己紹介
 
 ---
-# knakayama(中山 幸治)&nbsp;![knakayama](https://avatars2.githubusercontent.com/u/1545919?v=3&s=400)
+# 中山 幸治(knakayama)&nbsp;![knakayama](https://avatars2.githubusercontent.com/u/1545919?v=3&s=400)
 ### [https://knakayama.github.io](https://knakayama.github.io)
 ### ![PSA](images/PSA.png)
 
@@ -22,6 +23,10 @@ background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/n
 ---
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_osaka_office_front_800-e1465205568251.jpg)
 **クラスメソッド<br/>大阪オフィス<br/>爆誕**
+
+---
+background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_osaka_office_front_800-e1465205568251.jpg)
+**肥後橋駅から<br/>徒歩1分**
 
 ---
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_office_naka-e1465280928774.jpg)
@@ -41,34 +46,23 @@ background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/n
 
 ---
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/06/new_office_naka-e1465280928774.jpg)
-**オサレ系<br/>オフィス**
+**オサレ系<br/>オフィス<br/>(2回目)**
 
 ---
 background-image: url(images/osaka-members.png)
 
 ---
 background-image: url(images/osaka-members.png)
-**メンバーは<br/>まだ3人だけ<br/>(2016年7月)**
+**メンバーは<br/>まだ4人だけ<br/>(2016年7月)**
 
 ---
 **絶賛人材<br/>募集中**
-
----
-**まだ間に合う**
 
 ---
 **こんな話聞いてる場合じゃない**
 
 ---
-**絶賛人材<br/>募集中**
-
----
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/07/mesoko_01.png)
-## http://classmethod.jp/recruit/jobs/
-
----
-background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/07/mesoko_01.png)
-**まだ間に合う**
 ## http://classmethod.jp/recruit/jobs/
 
 ---
@@ -109,7 +103,7 @@ class: center, middle
 # 唐突ですが<br/>こんな経験無いですか?
 
 ---
-# アクセス増加でサーバが<br/>落ちた
+# アクセス増加で<br/>Webサーバが落ちた
 
 ---
 ### 通常のアクセス数の場合<br/><br/>![access-normal](images/access-normal.png)
@@ -118,7 +112,7 @@ class: center, middle
 ### アクセスが急増した場合<br/><br/>![access-high](images/access-high.png)
 
 ---
-# オートスケーリンググループでそれ解決できます
+# それ、オートスケーリンググループで解決できます
 ### # 一部を除く
 
 ---
@@ -131,7 +125,8 @@ class: center, middle
 # オートスケール?
 
 ---
-# *オートスケールは、クラウドコンピューティングで利用しているサーバーなどの台数を自動的に増減する技術、あるいはサービス。*
+> *オートスケールは、クラウドコンピューティングで利用しているサーバーなどの台数を自動的に増減する技術、あるいはサービス。*
+
 ### http://www.nttpc.co.jp/yougo/オートスケール.html
 
 ---
@@ -142,8 +137,9 @@ layout: true
 class: middle
 
 ---
-## - サーバを増加させる == スケールアウト
-## - サーバを減少させる == スケールイン
+### - インスタンスを増加させる == スケールアウト
+### - インスタンスを減少させる == スケールイン
+### - オートスケーリンググループ == Auto Scaling Group == ASG
 
 ---
 layout: true
@@ -153,16 +149,14 @@ class: center, middle
 # 2. オートスケーリンググループの詳細
 
 ---
-# ちなみに<br/>オートスケーリンググループ<br/> == <br/>Auto Scaling Group<br/> == <br/>ASG
-
----
 layout: true
 class: middle
 
 ---
 ## 2-1. 起動設定(ローンチコンフィギュレーション)
 ## 2-2. スケーリングポリシー
-## 2-3. インスタンスの起動数
+## 2-3. ヘルスチェック
+## 2-4. インスタンスの起動数
 
 ---
 layout: true
@@ -176,11 +170,11 @@ layout: true
 class: middle
 
 ---
-### - ASGで起動させるインスタンスの設定
+### - オートスケーリンググループで起動させるインスタンスの設定
 ### - どういったインスタンスで起動させるかを指定する
 ### - 例: メモリは1GB、ストレージは8GB、etc...
-### - 1つのASGには必ず1つの起動設定を指定する
-### - ASGの作成時やスケールアウトする時にこの起動設定に基づいたインスタンスが起動する
+### - 1つのオートスケーリンググループには必ず1つの起動設定を指定する
+### - オートスケーリンググループの作成時やスケールアウトする時にこの起動設定に基づいたインスタンスが起動する
 
 ---
 layout: true
@@ -200,14 +194,15 @@ class: middle
 ### - AWSの「監視」サービス
 ### - AWSのさまざまなメトリクスを収集(CloudWatch Metrics)
 ### - 集めたメトリクスのアラート設定が可能(CloudWatch Alarm)
-### - アラート検知時に特定のアクションを実行可能
+### - アラート検知時に特定のアクションを実行可能(通知など)
+### - 収集したメトリクスは2週間しか保存されない(それ以上保持したい場合は別の仕組みが必要)
 
 ---
 layout: true
 class: center, middle
 
 ---
-### CloudWatch Metricsのイメージ<br/><br/>
+### CloudWatch Metricsのイメージ
 ![cloudwatch-metrics](images/cloudwatch-metrics.png)
 
 ---
@@ -222,33 +217,59 @@ layout: true
 class: middle
 
 ---
-### - どういった条件でオートスケールさせるかという設定
+### - どういった条件でスケールさせるかという設定
 ### - CloudWatchとひも付けることができる
-### - メトリクスの閾値を超過した場合にオートスケールさせることが可能
-### - 例: アクセスが増加したのでスケールアウト
-### - 例: CPU使用率下がったのでスケールイン
+### - メトリクスの閾値を超過した場合にスケールさせることが可能
+### - 例: CPU使用率が上がったのでスケールアウト
+### - 例: アクセスが減少したのでスケールイン
 
 ---
 layout: true
 class: center, middle
 
 ---
-### CloudWatchとASGの連携<br/><br/>
+### CloudWatchとオートスケーリンググループの連携<br/><br/>
 ![cloudwatch-asg](images/cloudwatch-asg.png)
 
 ---
-# 2-3. インスタンスの起動数
-
----
-# オートスケーリンググループはどれくらいインスタンスを起動したいかを指定できる
+# 2-3. ヘルスチェック
 
 ---
 layout: true
 class: middle
 
 ---
+### - オートスケーリンググループはグループ内のインスタンスの状態を常にチェックしている(ヘルスチェック)
+### - ヘルスチェックに失敗したインスタンス(unhealthy)は作り変えられる
+### - つまりそのインスタンスは消去されて別のインスタンスを起動させようとする
+### - こうすることでグループ内のインスタンスが常に正常に動作することを保証できる
+
+---
+### - ヘルスチェックの方法は3つある(EC2/ELB/カスタム)
+### - この内もっともよく使うのはELB(L3レベルのロードバランサ)のヘルスチェック
+### - ELBとオートスケーリンググループを紐付ける
+### - ELBからオートスケーリンググループに対して定期的にアクセスして期待した結果が返ってくるかチェックする
+#### ヘルスチェック（Auto Scaling インスタンス対象）<br/>https://docs.aws.amazon.com/ja_jp/AutoScaling/latest/DeveloperGuide/healthcheck.html
+
+---
+layout: true
+class: center, middle
+
+---
+### ヘルスチェックのイメージ図(ELB)<br/><br/><br/>
+![health-check-elb](images/health-check-elb.png)
+
+---
+# 2-4. インスタンスの起動数
+
+---
+layout: true
+class: middle
+
+---
+### - オートスケーリンググループはどれくらいインスタンスを起動したいかを以下の値で指定できる
 ### - max(最大起動数) -> 最大でもこの数しか起動しない
-### - min(最低起動数) -> 最低でもこの数は起動させる
+### - min(最低起動数) -> 最低でもこの数は起動させようとする
 ### - desired(希望起動数) -> 常にこの数を起動させようとする
 
 ---
@@ -257,23 +278,14 @@ class: middle
 ### - desiredが2 -> インスタンスの数を常に2つに維持しようとする
 
 ---
-layout: true
-class: center, middle
+### - max/min/desiredの数を変更すれば手動でスケールさせることも可能
+### - オートスケーリンググループだからといってスケーリングポリシーを設定しないといけないわけではない
+### - スケーリングポリシーは必要ないが、オートスケーリンググループを利用したほうが良いシステムは存在する
 
 ---
-# max/min/desiredの数を変更すれば手動でスケールさせることも可能
-
----
-# 実はオートスケーリンググループだからといってスケーリングポリシーを設定しないといけないわけではない
-
----
-layout: true
-class: middle
-
----
-### - オートスケーリングさせずに常に1台は起動させたい場合はある
-### - 踏み台用サーバなど
-### - max/min/desiredを全て1にするとインスタンスが死んでも自動で新しく作り変えてくれる
+### - オートスケールはしなくてもいいが常に1台起動させたい場合
+### - 例えば、踏み台用サーバなどのように常に起動しておいて欲しいがクリティカルな役割でもないもの
+### - max/min/desiredを全て1にするとインスタンスがヘルスチェックに失敗しても自動で新しく作り変えてくれる
 ### - オートヒーリングパターン
 #### http://www.slideshare.net/kazukiueki76/20130823-cloudpacknight-lt
 
@@ -289,9 +301,22 @@ layout: true
 class: middle
 
 ---
-### - 急激なアクセス増加の場合スケールアウトが間に合わない場合がある
-### - インスタンスが起動するだけでサービスインできる仕組みを整えておく必要がある(デプロイ)
-### - スケールインしてインスタンスが消去されても問題ない構成にしておく必要がある(ステートレス)
+### - 急激にアクセスが増加した場合スケールアウトが間に合わない時がある
+### -> アクセスされる時間が把握できる場合はmax/min/desiredを調整して事前にインスタンスを手動スケールアウトさせておく
+### -> ELBの暖気申請も忘れずに
+#### Elastic Load Balancing の暖申請について<br/>http://dev.classmethod.jp/cloud/aws/elastic-load-balancing-pre-warming/
+
+---
+### - インスタンスが起動するだけでサービスインできる仕組みを整えておく必要がある
+### -> そうしないとスケールアウトしたときに使いものにならないインスタンスが起動してしまうため
+### -> ユーザデータでシェルスクリプト/Ansible/etcを実行して必要な設定を投入しておく
+#### プロビジョニングの今 ーフルマネージド・サービスを目指してー<br/>http://www.slideshare.net/shuji_w6e/ss-58485223
+
+---
+### - スケールインしてインスタンスが消去されても問題ない構成にしておく必要がある
+### -> つまりインスタンスにデータを持たせない(ステートレス)構成にしておく必要がある
+### -> 重要なデータを持ったインスタンスが勝手に消去されたら困るため
+### -> ログはfluentdなどのツールを使ってS3に保管しておくこと
 
 ---
 layout: true
@@ -325,7 +350,13 @@ class: center, middle
 # それでも
 
 ---
+background-image: url(images/asg.png)
 # オートスケーリンググループはともだち、こわくないよ
+
+---
+background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/07/mesoko_01.png)
+**絶賛人材<br/>募集中**
+## http://classmethod.jp/recruit/jobs/
 
 ---
 # おわり
