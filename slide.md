@@ -55,10 +55,6 @@ background-image: url(images/osaka-members.png)
 
 ---
 background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/07/mesoko_01.png)
-## http://classmethod.jp/recruit/jobs/
-
----
-background-image: url(http://cdn.dev.classmethod.jp/wp-content/uploads/2016/07/mesoko_01.png)
 **絶賛人材<br/>募集中**
 ## http://classmethod.jp/recruit/jobs/
 
